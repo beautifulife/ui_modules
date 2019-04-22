@@ -1,0 +1,9 @@
+.Card {
+  width: 200px;
+  border: 1px solid #eee;
+  border-radius: 3px;
+
+  &__image-wrapper {
+    overflow: hidden;
+  }
+}

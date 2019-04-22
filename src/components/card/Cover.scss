@@ -1,0 +1,13 @@
+.Cover {
+  &__img {
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+
+    &::after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+}
