@@ -18,7 +18,7 @@ const Card = ({
 }) => {
   return (
     <Fragment>
-      {cardType === 'vertical' ? (
+      {cardType === 'vertical' && (
         <div className="Card vertical">
           <Cover imgSrc={cardImgSrc} label={cardTitle} type={cardType} />
           <Information
@@ -35,7 +35,8 @@ const Card = ({
             />
           )}
         </div>
-      ) : (
+      )}
+      {cardType === 'horizontal' && (
         <div className="Card horizontal">
           <div className="cell">
             <Cover imgSrc={cardImgSrc} label={cardTitle} type={cardType} />
