@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './InputForm.scss';
 
 class InputForm extends Component {
@@ -6,7 +7,7 @@ class InputForm extends Component {
     super(props);
     const { initialValue } = this.props;
     this.state = {
-      inputValue: initialValue || ''
+      inputValue: initialValue
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -38,7 +39,11 @@ class InputForm extends Component {
 
     return (
       <div className="InputForm">
-        <div className="InputForm__cell">
+        <div
+          className={`InputForm__wrapper ${
+            inputValue && isInputValueChanged ? 'active' : ''
+          }`}
+        >
           <textarea
             className={`InputForm__textarea ${
               isInputDisabled ? 'disabled' : ''
@@ -50,20 +55,29 @@ class InputForm extends Component {
           />
           <span className="InputForm__word_count">{wordCountToLimit}</span>
         </div>
-        <div className="InputForm__cell">
-          {inputValue && isInputValueChanged && (
-            <button
-              className="InputForm__save-btn"
-              type="submit"
-              onClick={this.handleClick}
-            >
-              Save
-            </button>
-          )}
-        </div>
+        {inputValue && isInputValueChanged && (
+          <button
+            className="InputForm__save-btn"
+            type="submit"
+            onClick={this.handleClick}
+          >
+            Save
+          </button>
+        )}
       </div>
     );
   }
 }
+
+InputForm.propTypes = {
+  initialValue: PropTypes.string,
+  uiState: PropTypes.string,
+  onSaveClick: PropTypes.func.isRequired
+};
+
+InputForm.defaultProps = {
+  initialValue: '',
+  uiState: 'default'
+};
 
 export default InputForm;

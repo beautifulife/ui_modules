@@ -1,15 +1,26 @@
 .InputForm {
-  display: table;
   width: 600px;
   margin-bottom: 5px;
 
   &__cell {
-    display: table-cell;
     position: relative;
+    vertical-align: top;
+  }
+
+  &__wrapper {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    &.active {
+      display: inline-block;
+      width: calc(100% - 53px);
+    }
   }
 
   &__textarea {
     display: block;
+    position: relative;
     width: 100%;
     height: 50px;
     padding: 5px;
@@ -28,16 +39,18 @@
 
   &__word_count {
     position: absolute;
-    right: -5px;
+    right: 5px;
     bottom: 5px;
     font-size: 0.6rem;
     color: rgba(0, 0, 0, 0.45);
   }
 
   &__save-btn {
-    display: block;
+    display: inline-block;
+    vertical-align: top;
     width: 50px;
     height: 50px;
+    margin-left: 3px;
     border: 1px solid #eee;
     color: #31c089;
     background: none;
