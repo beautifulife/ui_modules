@@ -73,7 +73,6 @@ Card.defaultProps = {
   cardHilight: '',
   cardImgSrc: '',
   cardLabel: '',
-  cardRating: -1,
   cardRatingDesc: '',
   cardTitle: '',
   cardType: 'vertical'
