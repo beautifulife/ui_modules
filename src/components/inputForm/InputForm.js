@@ -15,7 +15,9 @@ class InputForm extends Component {
   }
 
   handleChange(event) {
-    if (event.currentTarget.value.length <= 500) {
+    const { limitWordCount } = this.props;
+
+    if (event.currentTarget.value.length <= limitWordCount) {
       this.setState({
         inputValue: event.currentTarget.value
       });
@@ -31,11 +33,11 @@ class InputForm extends Component {
 
   render() {
     const { inputValue } = this.state;
-    const { initialValue, uiState } = this.props;
+    const { initialValue, limitWordCount, uiState } = this.props;
 
     const isInputValueChanged = inputValue !== initialValue;
     const isInputDisabled = uiState === 'disabled' || uiState === 'readonly';
-    const wordCountToLimit = 500 - inputValue.length;
+    const wordCountToLimit = limitWordCount - inputValue.length;
 
     return (
       <div className="InputForm">
@@ -72,12 +74,14 @@ class InputForm extends Component {
 
 InputForm.propTypes = {
   initialValue: PropTypes.string,
+  limitWordCount: PropTypes.number,
   uiState: PropTypes.string,
   onSaveClick: PropTypes.func.isRequired
 };
 
 InputForm.defaultProps = {
   initialValue: '',
+  limitWordCount: 500,
   uiState: 'default'
 };
 
