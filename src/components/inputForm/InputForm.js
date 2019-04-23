@@ -59,6 +59,7 @@ class InputForm extends Component {
           <button
             className="InputForm__save-btn"
             type="submit"
+            title="save"
             onClick={this.handleClick}
           >
             Save

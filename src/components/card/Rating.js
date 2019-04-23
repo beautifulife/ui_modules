@@ -13,7 +13,9 @@ const Rating = ({ author, rating, ratingDesc, type }) => {
       const isFilled = i <= rating;
 
       renderedCircles.push(
-        <span key={i} className={`circle ${isFilled ? 'filled' : ''}`} />
+        <span key={i} className={`circle ${isFilled ? 'filled' : ''}`}>
+          {`평가 총 5점 중 ${rating}점`}
+        </span>
       );
     }
 
