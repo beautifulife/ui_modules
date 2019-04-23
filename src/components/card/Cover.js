@@ -2,7 +2,7 @@ import React from 'react';
 import './Cover.scss';
 import logo from '../../assets/images/logo.jpg';
 
-const Cover = ({ imgSrc, label }) => {
+const Cover = ({ imgSrc, label, type }) => {
   const styles = {
     background: {
       backgroundImage: `url(${imgSrc || logo})`
@@ -10,8 +10,8 @@ const Cover = ({ imgSrc, label }) => {
   };
 
   return (
-    <div className="Cover">
-      <div className="Cover__img" style={styles.background} aria-label={label || 'sub-image'} />
+    <div className={`Cover ${type}`}>
+      <div className="img" style={styles.background} aria-label={label || 'sub-image'} />
     </div>
   );
 };

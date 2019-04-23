@@ -47,6 +47,29 @@ class App extends Component {
             cardRatingDesc={cardRatingDesc}
             cardTitle={cardTitle}
           />
+          <Card
+            cardCrossOut={cardCrossOut}
+            cardHilight={cardHilight}
+            cardImgSrc={cardImgSrc}
+            cardLabel={cardLabel}
+            cardRating={cardRating}
+            cardTitle={cardTitle}
+          />
+          <Card
+            cardCrossOut={cardCrossOut}
+            cardHilight={cardHilight}
+            cardImgSrc={cardImgSrc}
+            cardLabel={cardLabel}
+            cardTitle={cardTitle}
+          />
+          <Card
+            cardCrossOut={cardCrossOut}
+            cardHilight={cardHilight}
+            cardImgSrc={cardImgSrc}
+            cardLabel={cardLabel}
+            cardRating={cardRating}
+            cardType="horizontal"
+          />
         </div>
       </div>
     );

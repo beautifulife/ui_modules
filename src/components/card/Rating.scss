@@ -1,3 +1,48 @@
 .Rating {
-  padding: 10px;
+  height: 55px;
+  padding: 0 10px;
+  border-top: 1px solid #eee;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  &__wrapper {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+  }
+
+  &__rate {
+    padding: 5px 0;
+    line-height: 0.8rem;
+
+    .circle {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      margin-right: 3px;
+      border-radius: 50%;
+      background-color: #d4d4d4;
+  
+      &.filled {
+        background-color: #ffd700;
+      }
+    }
+  }
+
+  &__desc {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  &.vertical {
+    display: table-cell;
+    
+  }
 }

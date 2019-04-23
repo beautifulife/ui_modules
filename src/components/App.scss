@@ -1,8 +1,11 @@
 .App {
-  text-align: center;
+  margin: 15px;
+
+  &__header {
+    text-align: center;
+  }
 
   &__body {
-    display: flex;
-    justify-content: space-between;
+    
   }
 }

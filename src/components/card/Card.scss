@@ -1,9 +1,14 @@
 .Card {
+  display: inline-block;
+  vertical-align: top;
   width: 200px;
+  margin: 0 15px;
   border: 1px solid #eee;
   border-radius: 3px;
 
-  &__image-wrapper {
-    overflow: hidden;
+  &.horizontal {
+    display: table;
+    width: 400px;
+    height: 150px;
   }
 }

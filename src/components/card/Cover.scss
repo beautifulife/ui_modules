@@ -1,13 +1,35 @@
 .Cover {
-  &__img {
-    width: 100%;
-    background-size: cover;
-    background-position: center center;
+  overflow: hidden;
 
-    &::after {
-      content: '';
-      display: block;
-      padding-bottom: 100%;
+  &.vertical {
+    .img {
+      width: 100%;
+      border-radius: 3px 3px 0 0;
+      background-size: cover;
+      background-position: center center;
+
+      &::after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+    }
+  }
+
+  &.horizontal {
+    display: table-cell;
+
+    .img {
+      height: 100%;
+      border-radius: 3px 0 0 3px;
+      background-size: cover;
+      background-position: center center;
+
+      &::after {
+        content: '';
+        display: block;
+        padding-bottom: 150px;
+      }
     }
   }
 }

@@ -1,3 +1,25 @@
 .Information {
   padding: 10px;
+
+  &__label {
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.45);
+  }
+
+  &__title {
+    height: 2.5rem;
+  }
+
+  &__bottom {
+    .hilight {
+      color: red;
+      margin-right: 3px;
+    }
+    .cross_out {
+      font-size: 0.65rem;
+      color: rgba(0, 0, 0, 0.45);
+      text-decoration: line-through;
+    }
+  }
 }

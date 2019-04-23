@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './Card.scss';
 import Cover from './Cover';
 import Information from './Information';
@@ -11,21 +11,39 @@ const Card = ({
   cardLabel,
   cardRating,
   cardRatingDesc,
-  cardTitle
+  cardTitle,
+  cardType = 'vertical'
 }) => {
   return (
-    <div className="Card">
-      <div className="Card__image-wrapper">
-        <Cover imgSrc={cardImgSrc} label={cardTitle} />
-      </div>
-      <Information
-        crossOut={cardCrossOut}
-        hilight={cardHilight}
-        label={cardLabel}
-        title={cardTitle}
-      />
-      <Rating rating={cardRating} ratingDesc={cardRatingDesc} />
-    </div>
+    <Fragment>
+      {cardType === 'vertical' ? (
+        <div className="Card">
+          <Cover imgSrc={cardImgSrc} label={cardTitle} type={cardType} />
+          <Information
+            crossOut={cardCrossOut}
+            hilight={cardHilight}
+            label={cardLabel}
+            title={cardTitle}
+          />
+          {cardRating && (
+            <Rating
+              rating={cardRating}
+              ratingDesc={cardRatingDesc}
+              type={cardType}
+            />
+          )}
+        </div>
+      ) : (
+        <div className="Card horizontal">
+          <Cover imgSrc={cardImgSrc} label={cardTitle} type={cardType} />
+          <Rating
+            rating={cardRating}
+            ratingDesc={cardRatingDesc}
+            type={cardType}
+          />
+        </div>
+      )}
+    </Fragment>
   );
 };
 
