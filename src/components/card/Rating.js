@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import './Rating.scss';
 
 const Rating = ({ author, rating, ratingDesc, type }) => {
-  const subStringRatingDesc = ratingDesc
-    ? ratingDesc.substring(0, 60) + '...'
-    : null;
+  const subStringRatingDesc = ratingDesc && ratingDesc.substring(0, 60) + '...';
+
   const renderRateCircle = () => {
     const renderedCircles = [];
 
@@ -24,14 +23,15 @@ const Rating = ({ author, rating, ratingDesc, type }) => {
 
   return (
     <Fragment>
-      {type === 'vertical' ? (
+      {type === 'vertical' && (
         <div className="Rating vertical">
           <div className="Rating__wrapper">
             <div className="Rating__rate">{renderRateCircle()}</div>
             <div className="Rating__desc">{ratingDesc}</div>
           </div>
         </div>
-      ) : (
+      )}
+      {type === 'horizontal' && (
         <div className="Rating horizontal">
           <div className="Rating__desc title">{ratingDesc}</div>
           <div className="Rating__desc long">{subStringRatingDesc}</div>

@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Information about render compare with snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Information
+    crossOut=""
+    hilight=""
+    label=""
+    title=""
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="Information__label"
+        >
+          Card Label
+        </p>,
+        <p
+          className="Information__title"
+        >
+          Card Title
+        </p>,
+        <div
+          className="Information__bottom"
+        >
+          <span
+            className="hilight"
+          >
+            Hilight
+          </span>
+          <span
+            className="cross_out"
+          >
+            Cross Out
+          </span>
+        </div>,
+      ],
+      "className": "Information",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Card Label",
+          "className": "Information__label",
+        },
+        "ref": null,
+        "rendered": "Card Label",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Card Title",
+          "className": "Information__title",
+        },
+        "ref": null,
+        "rendered": "Card Title",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className="hilight"
+            >
+              Hilight
+            </span>,
+            <span
+              className="cross_out"
+            >
+              Cross Out
+            </span>,
+          ],
+          "className": "Information__bottom",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Hilight",
+              "className": "hilight",
+            },
+            "ref": null,
+            "rendered": "Hilight",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Cross Out",
+              "className": "cross_out",
+            },
+            "ref": null,
+            "rendered": "Cross Out",
+            "type": "span",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="Information__label"
+          >
+            Card Label
+          </p>,
+          <p
+            className="Information__title"
+          >
+            Card Title
+          </p>,
+          <div
+            className="Information__bottom"
+          >
+            <span
+              className="hilight"
+            >
+              Hilight
+            </span>
+            <span
+              className="cross_out"
+            >
+              Cross Out
+            </span>
+          </div>,
+        ],
+        "className": "Information",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Card Label",
+            "className": "Information__label",
+          },
+          "ref": null,
+          "rendered": "Card Label",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Card Title",
+            "className": "Information__title",
+          },
+          "ref": null,
+          "rendered": "Card Title",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="hilight"
+              >
+                Hilight
+              </span>,
+              <span
+                className="cross_out"
+              >
+                Cross Out
+              </span>,
+            ],
+            "className": "Information__bottom",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Hilight",
+                "className": "hilight",
+              },
+              "ref": null,
+              "rendered": "Hilight",
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Cross Out",
+                "className": "cross_out",
+              },
+              "ref": null,
+              "rendered": "Cross Out",
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
