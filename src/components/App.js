@@ -8,6 +8,7 @@ class App extends Component {
     super(props);
     this.state = {
       card: {
+        cardAuthor: 'Jone Doe',
         cardCrossOut: '',
         cardHilight: '',
         cardImgSrc: '',
@@ -33,6 +34,7 @@ class App extends Component {
   render() {
     const {
       card: {
+        cardAuthor,
         cardCrossOut,
         cardHilight,
         cardImgSrc,
@@ -75,26 +77,23 @@ class App extends Component {
             cardTitle={cardTitle}
           />
           <Card
+            cardAuthor={cardAuthor}
             cardCrossOut={cardCrossOut}
             cardHilight={cardHilight}
             cardImgSrc={cardImgSrc}
             cardLabel={cardLabel}
             cardRating={cardRating}
+            cardRatingDesc={cardRatingDesc}
             cardType="horizontal"
           />
         </div>
         <div className="App__body">
-          <InputForm
-            onSaveClick={this.handleSaveClick}
-          />
+          <InputForm onSaveClick={this.handleSaveClick} />
           <InputForm
             initialValue={initialValue}
             onSaveClick={this.handleSaveClick}
           />
-          <InputForm
-            uiState={uiState}
-            onSaveClick={this.handleSaveClick}
-          />
+          <InputForm uiState={uiState} onSaveClick={this.handleSaveClick} />
         </div>
       </div>
     );

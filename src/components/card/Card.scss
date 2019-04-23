@@ -2,13 +2,19 @@
   display: inline-block;
   vertical-align: top;
   width: 200px;
-  margin: 0 15px;
+  margin-right: 15px;
   border: 1px solid #eee;
   border-radius: 3px;
 
   &.horizontal {
-    display: table;
+    display: inline-block;
     width: 400px;
     height: 150px;
+
+    .cell {
+      display: table-cell;
+      overflow: hidden;
+      vertical-align: top;
+    }
   }
 }

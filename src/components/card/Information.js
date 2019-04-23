@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Information.scss';
 
 const Information = ({ crossOut, hilight, label, title }) => {
@@ -12,6 +13,20 @@ const Information = ({ crossOut, hilight, label, title }) => {
       </div>
     </div>
   );
+};
+
+Information.propTypes = {
+  crossOut: PropTypes.string,
+  hilight: PropTypes.string,
+  label: PropTypes.string,
+  title: PropTypes.string
+};
+
+Information.defaultProps = {
+  crossOut: '',
+  hilight: '',
+  label: '',
+  title: ''
 };
 
 export default Information;
